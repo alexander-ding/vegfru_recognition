@@ -89,5 +89,4 @@ data/
 .mypy_cache/
 
 data/
-android/
 models/
