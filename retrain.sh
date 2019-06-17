@@ -25,7 +25,7 @@ python scripts/retrain.py \
 
 OPTIMIZED_GRAPH=$PWD/models/retrained/optimized.pb
 
-python scripts/optimize \
+python scripts/optimize.py \
     --input=$OUTPUT_GRAPH \
     --output=$OPTIMIZED_GRAPH \
     --input_names=Placeholder \
