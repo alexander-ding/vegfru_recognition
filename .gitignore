@@ -76,12 +76,7 @@ target/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-data/raw/*
-!data/raw/.gitkeep
-data/interim/*
-!data/interim/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+data/
 
 # Mac OS-specific storage files
 .DS_Store
@@ -92,3 +87,7 @@ data/processed/*
 
 # Mypy cache
 .mypy_cache/
+
+data/
+android/
+models/
