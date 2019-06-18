@@ -16,9 +16,6 @@ python scripts/retrain.py \
     --image_dir=${DATASET_DIR} \
     --tfhub_module=$TFHUB_MODULE \
     --bottleneck_dir=$BOTTLENECK_DIR \
-    --flip_left_right \
-    --random_scale=30 \
-    --random_brightness=30 \
     --testing_percentage=10 \
     --validation_percentage=10 \
     --validation_batch_size=-1
