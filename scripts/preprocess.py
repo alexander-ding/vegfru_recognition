@@ -81,6 +81,7 @@ if not test_dir.exists():
     os.mkdir(str(test_dir.absolute()))
 
 print("Copying images...")
+
 for name in name_list:
     base_dir = train_dir / name
     if not base_dir.exists():
@@ -92,7 +93,7 @@ for name in name_list:
     base_dir = test_dir / name
     if not base_dir.exists():
         os.mkdir(base_dir)
-    for j, d in enumerate(d_train[name]):
+    for j, d in enumerate(d_test[name]):
         os.rename(data_dir / d, base_dir / "{}_{}.jpg".format(name, j))
 
 print("...Done")
