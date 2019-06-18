@@ -25,7 +25,7 @@ with open(list_dir / "veg_train.txt") as f:
         if name not in d_train.keys():
             d_train[name] = []
             name_list.append(name)
-        d_train[name].append(directory)
+        d_train[name].append(Path("veg200_images") / directory)
 
 with open(list_dir / "veg_test.txt") as f:
     for l in f.readlines():
@@ -33,14 +33,14 @@ with open(list_dir / "veg_test.txt") as f:
         if name not in d_train.keys():
             d_train[name] = []
             name_list.append(name)
-        d_train[name].append(directory)
+        d_train[name].append(Path("veg200_images") /directory)
 
 with open(list_dir / "veg_val.txt") as f:
     for l in f.readlines():
         directory, name, i = parse(l)
         if name not in d_test.keys():
             d_test[name] = []
-        d_test[name].append(directory)
+        d_test[name].append(Path("veg200_images") /directory)
 
 list_dir = data_dir / "fru92_lists"
 with open(list_dir / "fru_train.txt") as f:
@@ -49,7 +49,7 @@ with open(list_dir / "fru_train.txt") as f:
         if name not in d_train.keys():
             d_train[name] = []
             name_list.append(name)
-        d_train[name].append(directory)
+        d_train[name].append(Path("fru92_images") /directory)
 
 with open(list_dir / "fru_test.txt") as f:
     for l in f.readlines():
@@ -57,14 +57,14 @@ with open(list_dir / "fru_test.txt") as f:
         if name not in d_train.keys():
             d_train[name] = []
             name_list.append(name)
-        d_train[name].append(directory)
+        d_train[name].append(Path("fru92_images") / directory)
 
 with open(list_dir / "fru_val.txt") as f:
     for l in f.readlines():
         directory, name, i = parse(l)
         if name not in d_test.keys():
             d_test[name] = []
-        d_test[name].append(directory)
+        d_test[name].append(Path("fru92_images") / directory)
 
 print("Gathered all the file directories")
 
