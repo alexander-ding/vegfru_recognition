@@ -8,11 +8,11 @@ def parse(line):
     name = d.split('/')[0]
     return (d, name, int(i))
 
+data_dir = Path("data") / "raw"
+
 if not data_dir.exists():
     print("data/raw does not exist. Please download the vegfru dataset and extract it at data/raw")
     exit(-1)
-
-data_dir = Path("data") / "raw"
 
 list_dir = data_dir / "veg200_lists"
 d_train = {}
